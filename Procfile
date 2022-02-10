@@ -1,1 +1,0 @@
-web: node server/dist/v1/server.js
