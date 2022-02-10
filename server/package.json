@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "locus server side",
+  "scripts": {
+    "watch": "NODE_ENV=development nodemon api/v1/server.ts",
+    "start": "NODE_ENV=production node dist/v1/server.js",
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "@socket.io/redis-adapter": "^7.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "farmhash": "^3.2.2",
+    "helmet": "^5.0.2",
+    "mongoose": "^6.2.1",
+    "redis": "^4.0.3",
+    "socket.io": "^4.4.1",
+    "winston": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.15",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.5",
+    "ts-node": "^10.4.0"
+  },
+  "author": "hamza ghenimi",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "locus",
+  "version": "1.0.0",
+  "description": "an open source application provides a real time communication service over video, voice and text",
+  "scripts": {
+    "installSerevrDep": "npm install --prefix server",
+    "installClientDep": "npm install --prefix client",
+    "buildClient": "npm run build --prefix client",
+    "buildServer": "npm run build --prefix server",
+    "startServer": "npm run start --prefix server",
+    "install": "npm run installSerevrDep && npm run installClientDep",
+    "build": "npm run buildClient && npm run buildServer",
+    "start": "npm run startServer"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "hamza ghenimi",
+  "license": "ISC",
+  "keywords": []
+}
