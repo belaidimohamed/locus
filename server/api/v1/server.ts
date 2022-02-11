@@ -58,7 +58,7 @@ if (cluster.isPrimary) {
   io.on("connection", socket => {
 
     const workerId = cluster.worker && cluster.worker.id!
-		logger.info(`connected to worker: ${workerId}`);
+		logger.info(`socket connected to worker: ${workerId}`);
   });
 
   // Listen to messages sent from the master. Ignore everything else.

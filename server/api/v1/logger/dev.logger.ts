@@ -1,5 +1,4 @@
 import winston from "winston";
-import path from "path";
 
 const logFormat = winston.format.printf(({ level, message, stack, timestamp }) => {
   return `[${timestamp}]: ${level}: ${message || stack}`;

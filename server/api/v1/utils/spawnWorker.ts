@@ -1,3 +1,5 @@
+import { logger } from "../logger";
+
 export function spawnWorker<
   X extends  { on(a: string, b: Function): void }, 
   Y extends {fork(): X }>
@@ -6,7 +8,7 @@ export function spawnWorker<
 
   // Optional: Restart worker on exit
   workers[i].on('exit', () => {
-    console.log('respawning worker', i);
+    logger.info('respawning worker', i);
     spawnWorker(workers, cluster, i);
   });
 };
