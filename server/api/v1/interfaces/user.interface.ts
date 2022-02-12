@@ -7,5 +7,6 @@ export interface User<T> {
   password: string;
   avatar?: string;
   friends?: Array<T>;
+  notifications?: Array<object>;
   blockedBy?: Array<T>;
 };
