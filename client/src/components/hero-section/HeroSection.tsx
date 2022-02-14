@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import bgimg1 from '../../assets/bgimg1.jpg'
 import logo from '../../assets/locus1.png'
 import './styles.css'
 
-export function HeroSection() {
+export function HeroSection(): React.ReactElement {
   return (
     <>
       <section className='hero-section'>
@@ -16,12 +18,16 @@ export function HeroSection() {
             <p>...a space where you can easily talk with friends and make new ones</p>
             <h2>JOIN US TODAY</h2>
             <div className='actions-container'>
-              <button type="button" className="btn login">
-                <span>Login</span>
-              </button>
-              <button type="button" className="btn register">
-                <span>Register</span>
-              </button>
+              <Link to='/login'>
+                <button type='button' className='btn login'>
+                  <span>Login</span>
+                </button>
+              </Link>
+              <Link to='/register'>
+                <button type='button' className='btn register'>
+                  <span>Register</span>
+                </button>
+              </Link>
             </div>
           </div>
           <img className='hero-img' src={bgimg1} alt='bgimg1' />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Users() {
+export function Users(): React.ReactElement {
   return (
     <div>Users</div>
   )

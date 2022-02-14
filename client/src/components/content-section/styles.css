@@ -10,6 +10,13 @@ div .main-body {
 	grid-template-columns: auto auto auto;
 }
 
-img {
+.spc {
 	width: 200px;
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+	div .main-body {
+		display: block;
+	}
 }

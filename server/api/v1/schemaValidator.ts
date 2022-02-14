@@ -4,7 +4,6 @@ const registerSchema = {
   type: "object",
   properties: {
     username: {type: "string"},
-    isAdmin: {type: "boolean", nullable: true},
     firstName: {type: "string"},
     lastName: {type: "string"},
     gender: {type: "string"},

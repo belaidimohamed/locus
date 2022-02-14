@@ -2,3 +2,37 @@
 	text-align: center;
 	overflow: hidden;
 }
+
+.btn {
+	border: none;
+	border-radius: 5%;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 15px 50px;
+	margin: 0 auto;
+}
+
+.error {
+	color: red;
+}
+
+input {
+	width: 90%;
+	height: 20px;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5%;
+}
+
+select {
+	width: 96%;
+	height: 40px;
+	padding: 10px;
+	margin: 10px auto;
+}

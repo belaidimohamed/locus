@@ -1,0 +1,71 @@
+.logo {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -5%);
+	width: 120px;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+div .card {
+	position: absolute;
+	background-color: #353b48;
+	height: 48%;
+	width: 28.75%;
+	padding: 15px;
+	border-radius: 8px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bg-img {
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	margin-top: 0;
+	color: #ecf0f1;
+	font-size: 45px;
+	font-weight: 700;
+}
+
+.login-submit {
+	margin-top: 20px;
+	color: #ecf0f1;
+	background-color: #8e44ad;
+	border-radius: 5%;
+}
+
+.redirect {
+	color: #ecf0f1;
+	font-weight: 300;
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.logo {
+		height: 100px;
+	}
+
+	div.card {
+		height: 50%;
+		width: 45%;
+	}
+
+	.bg-img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+	div.card {
+		height: 40%;
+		width: 80%;
+	}
+}
