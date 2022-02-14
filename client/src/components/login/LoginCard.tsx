@@ -29,13 +29,13 @@ export function LoginCard({submitHandler, error}: props): React.ReactElement {
           <input type='text' 
                 placeholder='username' 
                 value={username}
-                onChange={e => setUsername(e.target.value)} 
+                onChange={e => setUsername(e.target.value.toLocaleLowerCase())} 
                 required
           />
           <input type='password' 
                 placeholder='password' 
                 value={password}
-                onChange={e => setPassword(e.target.value)} 
+                onChange={e => setPassword(e.target.value.toLocaleLowerCase())} 
                 required
           />
           <button type='button' className='btn login-submit' onClick={() => submitHandler({username, password})}>

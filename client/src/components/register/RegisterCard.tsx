@@ -31,22 +31,22 @@ export function RegisterCard({submitHandler, error}: Props): React.ReactElement 
           <input type='text' 
                   placeholder='username' 
                   value={username} 
-                  onChange={e => setUsername(e.target.value)} 
+                  onChange={e => setUsername(e.target.value.toLocaleLowerCase())} 
                   required
           />
           <input type='text' 
                   placeholder='first name' 
                   value={firstName} 
-                  onChange={e => setFirstName(e.target.value)} 
+                  onChange={e => setFirstName(e.target.value.toLocaleLowerCase())} 
                   required
           />
            <input type='text' 
                   placeholder='first name' 
                   value={lastName} 
-                  onChange={e => setLastName(e.target.value)} 
+                  onChange={e => setLastName(e.target.value.toLocaleLowerCase())} 
                   required
           />
-          <select name="gender" defaultValue={'DEFAULT'} onChange={e => setGender(e.target.value)}>
+          <select name="gender" defaultValue={'DEFAULT'} onChange={e => setGender(e.target.value.toLocaleLowerCase())}>
             <option value="DEFAULT" disabled hidden>Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
