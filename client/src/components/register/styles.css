@@ -56,9 +56,9 @@ div .register-card {
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
 	div .register-card {
-		height: 75%;
+		height: 82%;
 		width: 80%;
-		transform: translate(-50%, -228%);
+		transform: translate(-50%, -203%);
 	}
 
 	select {
