@@ -10,6 +10,7 @@ const userSchema = new Schema<User<Schema.Types.ObjectId>>({
   gender: { type: String, required: true },
   password: { type: String, required: true},
   avatar: {type: String, required: false},
+  location: {type: String, required: false},
   friends: {type: Array, required: false},
   notifications: {type: Array, required: false},
   blockedBy: {type: Array, required: false},

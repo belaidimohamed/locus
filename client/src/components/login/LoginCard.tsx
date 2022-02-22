@@ -35,7 +35,7 @@ export function LoginCard({submitHandler, error}: props): React.ReactElement {
           <input type='password' 
                 placeholder='password' 
                 value={password}
-                onChange={e => setPassword(e.target.value.toLocaleLowerCase())} 
+                onChange={e => setPassword(e.target.value)} 
                 required
           />
           <button type='button' className='btn login-submit' onClick={() => submitHandler({username, password})}>

@@ -5,7 +5,7 @@ import { App } from './App';
 import axios from 'axios';
 import './index.css';
 
-axios.defaults.baseURL = 'https://mylocus.herokuapp.com/api/v1'
+axios.defaults.baseURL = window.location.origin + '/api/v1'
 
 ReactDOM.render(
   <React.StrictMode>
