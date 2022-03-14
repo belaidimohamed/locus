@@ -5,7 +5,9 @@ import { App } from './App';
 import axios from 'axios';
 import './index.css';
 
-axios.defaults.baseURL = window.location.origin + '/api/v1'
+process.env.REACT_APP_MODE === 'production' ? 
+                                    axios.defaults.baseURL = window.location.origin + '/api/v1' : // in production
+                                    axios.defaults.baseURL = 'http://localhost:4000/api/v1/' // in development
 
 ReactDOM.render(
   <React.StrictMode>

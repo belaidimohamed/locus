@@ -7,6 +7,7 @@ import Ajv from "ajv";
 import { UserModel } from "../models/user.model";
 import { User } from "../interfaces/user.interface";
 import { registerSchema, loginSchema } from "../schemaValidator";
+import { logger } from "../logger";
 
 export class AuthService {
   private userInfo;
@@ -42,8 +43,9 @@ export class AuthService {
       // exclude password
       const { password, ...data } = this.userInfo!;
       return { error: false, detail: data };
-    } return { error: true, detail };
-
+    }; 
+    logger.error(detail);
+    return { error: true, detail };
   };
 
   async login() {
@@ -53,15 +55,17 @@ export class AuthService {
       const { username, password } = this.loginInfo!;
       const user = await UserModel.findOne({username: username});
       if (user) {
-        const { username, firstName, lastName, gender, avatar } = user
+        const { _id, username, firstName, lastName, gender, avatar } = user;
         // check passwords matches
         const match = await bcrypt.compare(password, user.password);
         if (match) {
-          const token = jwt.sign({ username, firstName, lastName, gender, avatar }, process.env.SECRET_KEY!);
+          const token = jwt.sign({ _id, username, firstName, lastName, gender, avatar }, process.env.SECRET_KEY!);
           return { error: false, detail: token };
         } return { error: true, detail: "Invalid password" };
       } return { error: true, detail: "This username doesn't exists" };
-    } return { error: true, detail };
+    };
+    logger.error(detail);
+    return { error: true, detail };
   };
 
   validator(data: object, schema: object) {

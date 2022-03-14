@@ -8,17 +8,25 @@ const path_1 = __importDefault(require("path"));
 const express_1 = __importDefault(require("express"));
 const helmet_1 = __importDefault(require("helmet"));
 const cors_1 = __importDefault(require("cors"));
+const morgan_1 = __importDefault(require("morgan"));
 const auth_router_1 = require("./routers/auth/auth.router");
+const users_router_1 = require("./routers/users/users.router");
 const errorCatcher_1 = require("./middlewares/errorCatcher");
 const app = (0, express_1.default)();
 exports.app = app;
 app.use((0, cors_1.default)());
-app.use((0, helmet_1.default)());
+app.use(helmet_1.default.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+        "img-src": ["'self'", "https: data:"]
+    }
+}));
+process.env.NODE_ENV === 'development' && app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(express_1.default.static(path_1.default.join(__dirname, "..", "..", "public")));
-app.use('/api/v1/auth', auth_router_1.AuthRouter);
-// app.use('/api/v1/users', )
+app.use("/api/v1/auth", auth_router_1.AuthRouter);
+app.use("/api/v1/users", users_router_1.UserRouter);
 // custom middleware
 app.use(errorCatcher_1.errorCatcher);
 app.get("/*", (req, res) => {

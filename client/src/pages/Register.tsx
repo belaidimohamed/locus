@@ -16,7 +16,7 @@ export function Register() {
     if (payload.username && payload.firstName && payload.lastName && payload.gender) {
       const [error, res] = await tryToCatch(Auth.register, payload);
       if (error) {
-        setErrorMessage(error.detail);;
+        setErrorMessage(error.detail);
       } else if (res) {
         navigate('/login');
       }

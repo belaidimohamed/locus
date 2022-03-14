@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/97.73dd7e92.chunk.js","mappings":"4KAEO,SAASA,IACd,OACE","sources":["pages/Notifications.tsx"],"sourcesContent":["import React from 'react'\n\nexport function Notifications(): React.ReactElement {\n  return (\n    <div>Notifications</div>\n  )\n}\n"],"names":["Notifications"],"sourceRoot":""}

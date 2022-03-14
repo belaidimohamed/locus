@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/289.b565027f.chunk.js","mappings":"2KAEO,SAASA,IACd,OACE","sources":["pages/UserFriends.tsx"],"sourcesContent":["import React from 'react'\n\nexport function UserFriends(): React.ReactElement {\n  return (\n    <div>UserFriends</div>\n  )\n}\n"],"names":["UserFriends"],"sourceRoot":""}

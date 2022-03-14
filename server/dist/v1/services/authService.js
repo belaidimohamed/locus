@@ -29,6 +29,7 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const ajv_1 = __importDefault(require("ajv"));
 const user_model_1 = require("../models/user.model");
 const schemaValidator_1 = require("../schemaValidator");
+const logger_1 = require("../logger");
 class AuthService {
     constructor(registerObj, loginObject) {
         this.userInfo = registerObj;
@@ -57,6 +58,8 @@ class AuthService {
                 const _a = this.userInfo, { password } = _a, data = __rest(_a, ["password"]);
                 return { error: false, detail: data };
             }
+            ;
+            logger_1.logger.error(detail);
             return { error: true, detail };
         });
     }
@@ -69,17 +72,19 @@ class AuthService {
                 const { username, password } = this.loginInfo;
                 const user = yield user_model_1.UserModel.findOne({ username: username });
                 if (user) {
-                    const { username, firstName, lastName, gender, avatar } = user;
+                    const { _id, username, firstName, lastName, gender, avatar } = user;
                     // check passwords matches
                     const match = yield bcrypt_1.default.compare(password, user.password);
                     if (match) {
-                        const token = jsonwebtoken_1.default.sign({ username, firstName, lastName, gender, avatar }, process.env.SECRET_KEY);
+                        const token = jsonwebtoken_1.default.sign({ _id, username, firstName, lastName, gender, avatar }, process.env.SECRET_KEY);
                         return { error: false, detail: token };
                     }
                     return { error: true, detail: "Invalid password" };
                 }
                 return { error: true, detail: "This username doesn't exists" };
             }
+            ;
+            logger_1.logger.error(detail);
             return { error: true, detail };
         });
     }

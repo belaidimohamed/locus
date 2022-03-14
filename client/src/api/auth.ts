@@ -10,13 +10,13 @@ export class Auth {
                     axios.defaults.headers.common["Authorization"] = 'Bearer ' + res.data.detail
                     return res
                   }) // set token
-                  .catch(error => Promise.reject(error.response.data))
+                  .catch(error => Promise.reject(error.response.data));
   };
 
   static async register(payload: RegisterObj): Promise<any> {
     return await axios
                   .post('auth/register', payload)
-                  .catch(error => Promise.reject(error.response.data))
+                  .catch(error => Promise.reject(error.response.data));
                  
   };
 };

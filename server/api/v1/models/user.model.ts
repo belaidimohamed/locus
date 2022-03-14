@@ -9,10 +9,13 @@ const userSchema = new Schema<User<Schema.Types.ObjectId>>({
   lastName: { type: String, required: true },
   gender: { type: String, required: true },
   password: { type: String, required: true},
+  age: { type: Number, required: false},
+  bio: { type: String, required: false},
   avatar: {type: String, required: false},
   location: {type: String, required: false},
   friends: {type: Array, required: false},
   notifications: {type: Array, required: false},
+  blocks: {type: Array, required: false},
   blockedBy: {type: Array, required: false},
 });
 

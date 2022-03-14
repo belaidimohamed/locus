@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/916.801b09ff.chunk.js","mappings":"wKAEO,SAASA,IACd,OACE","sources":["pages/Messages.tsx"],"sourcesContent":["import React from 'react'\n\nexport function Messages() {\n  return (\n    <div>Messages</div>\n  )\n}\n"],"names":["Messages"],"sourceRoot":""}

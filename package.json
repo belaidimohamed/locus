@@ -9,7 +9,7 @@
     "buildServer": "npm run build --prefix server",
     "startServer": "npm run start --prefix server",
     "install": "npm run installSerevrDep && npm run installClientDep",
-    "build": "npm run buildClient",
+    "build": "npm run buildServer && npm run buildClient",
     "start": "npm run startServer"
   },
   "engines": {

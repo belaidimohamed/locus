@@ -1,5 +1,3 @@
-import { JSONSchemaType } from "ajv";
-
 const registerSchema = {
   type: "object",
   properties: {
@@ -24,6 +22,20 @@ const loginSchema = {
   additionalProperties: false
 };
 
+const userInfoSchema = {
+  type: "object",
+  properties: {
+    firstName: {type: "string"},
+    lastName: {type: "string"},
+    gender: {type: "string"},
+    age: {type: "number", nullable: true},
+    bio: {type: "string", nullable: true},
+    location: {type: "string", nullable: true},
+  },
+  required: ["firstName", "lastName", "gender"],
+  additionalProperties: false
+}
+
 const messageSchema = {
   type: "object",
   properties: {
@@ -35,4 +47,4 @@ const messageSchema = {
   additionalProperties: false
 };
 
-export { registerSchema, loginSchema, messageSchema };
+export { registerSchema, loginSchema, userInfoSchema, messageSchema };

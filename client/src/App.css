@@ -27,12 +27,24 @@ input {
 	height: 20px;
 	padding: 10px;
 	margin: 10px auto;
-	border-radius: 5%;
 }
 
 select {
-	width: 96%;
+	width: 95%;
 	height: 40px;
 	padding: 10px;
 	margin: 10px auto;
+}
+
+textarea {
+	width: 93%;
+	height: 50px;
+}
+
+.page-container {
+	height: 100vh;
+}
+
+a {
+	color: brown;
 }

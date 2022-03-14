@@ -50,7 +50,6 @@ export function RegisterCard({submitHandler, error}: Props): React.ReactElement 
             <option value="DEFAULT" disabled hidden>Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="bottts">Robot</option>
           </select>
           <input type='password' 
                   placeholder='password' 
