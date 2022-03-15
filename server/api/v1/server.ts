@@ -73,10 +73,9 @@ if (process.env.NODE_ENV === "production") {
     });
   };
 } else {
-   // Don"t expose our internal server to the outside world.
-   const server = app.listen(PORT, () => logger.info("server run on development mode on port:", PORT));
+   const server = app.listen(PORT, () => logger.info("server run on development mode on port: "+PORT));
    const io = new Server(server);
-   // https://socket.io/docs/v4/redis-adapter/#migrating-from-socketio-redis
+
    const pubClient = createClient({ url: "redis://localhost:6379" });
    const subClient = pubClient.duplicate();
  
@@ -86,4 +85,4 @@ if (process.env.NODE_ENV === "production") {
 
    });
  
-}
+};

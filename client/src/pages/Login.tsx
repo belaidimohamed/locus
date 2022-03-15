@@ -23,12 +23,12 @@ export function Login(): React.ReactElement {
         setErrorMessage(error.detail);
       } else {
         localStorage.setItem('token', res.data.detail);
-        token.setToken(res.data.detail)
+        token.setToken(res.data.detail);
         navigate('/messages');
       }
     } else {
       setErrorMessage('username and password are required!');
-    }
+    };
   };
 
   return <LoginCard submitHandler={submitHandler} error={errorMessage} />;

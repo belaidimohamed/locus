@@ -17,9 +17,9 @@ export function UserProfile(): React.ReactElement {
   const theme = useContext(ThemeContext)
 
   const userContext = useContext(UserContext);
-  const [userInfo, setUserInfo] = useState<object | null>(null);
-
   const tokenContext = useContext(TokenContext);
+  
+  const [userInfo, setUserInfo] = useState<object | null>(null);
 
   const submitHandler = async (payload: updateProfileObj) => {    
     const [error, res] = await tryToCatch(User.updateUserInfo, tokenContext.token, payload);
