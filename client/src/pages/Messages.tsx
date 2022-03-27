@@ -1,7 +1,10 @@
 import React from 'react'
+import SideNav from '../components/Messages/SideNav'
 
 export function Messages() {
   return (
-    <div>Messages</div>
+    <div>
+      <SideNav />
+    </div>
   )
 }

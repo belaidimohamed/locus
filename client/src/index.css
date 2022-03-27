@@ -3,7 +3,7 @@
 body {
 	margin: 0;
 	font-family: Rowdies, sans-serif;
-	font-weight: 300;
+	/* font-weight: 300; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #ecf0f1;

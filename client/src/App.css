@@ -1,5 +1,4 @@
 .App {
-	text-align: center;
 	overflow: hidden;
 }
 
@@ -22,12 +21,12 @@
 	color: red;
 }
 
-input {
+/* input {
 	width: 90%;
 	height: 20px;
 	padding: 10px;
 	margin: 10px auto;
-}
+} */
 
 select {
 	width: 95%;
@@ -41,10 +40,10 @@ textarea {
 	height: 50px;
 }
 
-.page-container {
+/* .page-container {
 	height: 100vh;
-}
+} */
 
-a {
+/* a {
 	color: brown;
-}
+} */

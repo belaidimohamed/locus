@@ -1,0 +1,95 @@
+.sideNav-container {
+  width: 30%;
+  border-right: 2px solid #dee2e6!important;
+  height: 100vh;
+  background-color: #fff;
+  overflow: scroll;
+}
+.settings-nav {
+  background: rgba(230, 230, 230);
+  height: 65px;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+}
+/* .active {
+  background-color: rgba(72, 163, 216, 0.644)!important;
+} */
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  float: left;
+  padding: 8px;
+  margin-left:2% ;
+}
+.icons-container {
+  float: right;
+  padding: 5px;
+}
+.icons {
+  padding: 8px;
+}
+/* ----------- search bar ------------------- */
+
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+}
+.input-wrapper {
+    background: #fff;
+    border-radius: 40px;
+    height: 40px;
+ }
+.search-icon {
+  color: grey;
+  margin-left: 3%;
+  vertical-align: middle;
+ }
+.message-input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+  height: 40px;
+}
+*:focus {
+    outline: none;
+}
+::placeholder {
+  color: grey;
+  padding-left: 10px;
+}
+/* ----------- friends messages ------------------- */
+
+.friend-container {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: baseline;
+  background: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.friend-container:hover {
+  background-color: rgba(72, 163, 216, 0.644)!important;
+}
+.friend-text {
+  margin-left: 12px;
+  width: 70%;
+}
+.friend-name {
+  font-size: 17px;
+}
+.text-muted {
+  color: #6c757d!important;
+}
+.message-photo {
+}
+.hr {
+  width: 70%;
+  background-color: #fff;
+}
+.small {
+  font-size: 80%;
+  font-weight:lighter;
+}
